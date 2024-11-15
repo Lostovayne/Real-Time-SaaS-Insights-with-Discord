@@ -1,8 +1,13 @@
 const Page = () => {
   return (
-    <div>
-      <h1>Hello world!</h1>
-    </div>
+    <>
+      <section className="relative py-24 sm-32 bg-brand-25">
+        <MaxWidthWrapper></MaxWidthWrapper>
+      </section>
+      <section></section>
+      <section></section>
+      <section></section>
+    </>
   )
 }
 
