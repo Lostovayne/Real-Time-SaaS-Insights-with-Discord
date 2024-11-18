@@ -15,8 +15,10 @@
     "@neondatabase/serverless": "^0.9.5",
     "@prisma/adapter-neon": "^5.22.0",
     "@prisma/client": "^5.22.0",
+    "@radix-ui/react-slot": "^1.1.0",
     "@tanstack/react-query": "^5.60.2",
     "@upstash/redis": "^1.34.3",
+    "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "hono": "^4.6.10",
     "lucide-react": "^0.460.0",
@@ -26,6 +28,7 @@
     "react-dom": "^18.3.1",
     "superjson": "^2.2.1",
     "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7",
     "wrangler": "^3.87.0",
     "zod": "^3.23.8"
   },

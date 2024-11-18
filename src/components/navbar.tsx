@@ -1,7 +1,6 @@
-import { MaxWidthWrapper } from "@/components/max-with-wrapper"
-import { Button } from "@/components/ui/button"
 import { SignOutButton } from "@clerk/nextjs"
 import Link from "next/link"
+import { MaxWidthWrapper } from "./max-with-wrapper"
 
 export const Navbar = () => {
   const user = false
@@ -17,7 +16,7 @@ export const Navbar = () => {
             {user ? (
               <>
                 <SignOutButton>
-                  <Button>Sign out</Button>
+                  <button className=""></button>
                 </SignOutButton>
               </>
             ) : null}

@@ -1,8 +1,9 @@
+import { Providers } from "@/components/providers"
 import { cn } from "@/utils"
 import type { Metadata } from "next"
 import { EB_Garamond, Inter } from "next/font/google"
-import { Providers } from "./components/providers"
 
+import { ClerkProvider } from "@clerk/nextjs"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
@@ -23,10 +24,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={cn(inter.variable, eb_garamond.variable)}>
-      <body className="font-sans bg-brand-50 text-brand-950 antialiased">
-        <Providers>{children}</Providers>
-      </body>
-    </html>
+    <ClerkProvider dynamic>
+      <html lang="en" className={cn(inter.variable, eb_garamond.variable)}>
+        <body className="font-sans bg-brand-50 text-brand-950 antialiased">
+          <Providers>{children}</Providers>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }

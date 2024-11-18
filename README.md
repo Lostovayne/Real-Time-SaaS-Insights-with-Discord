@@ -15,6 +15,7 @@ Una aplicación web moderna construida con Next.js y un conjunto robusto de tecn
 ## 🛠️ Tecnologías
 
 - **Frontend:**
+
   - Next.js 14
   - React 18
   - Tailwind CSS
@@ -23,6 +24,7 @@ Una aplicación web moderna construida con Next.js y un conjunto robusto de tecn
   - Lucide React (iconos)
 
 - **Backend:**
+
   - Prisma ORM
   - PostgreSQL (NeonDB)
   - Redis (Upstash)
@@ -30,6 +32,7 @@ Una aplicación web moderna construida con Next.js y un conjunto robusto de tecn
   - Cloudflare Workers
 
 - **Autenticación:**
+
   - Clerk
 
 - **Herramientas de Desarrollo:**
@@ -49,22 +52,26 @@ Una aplicación web moderna construida con Next.js y un conjunto robusto de tecn
 ## 🔧 Instalación
 
 1. Clona el repositorio:
+
 ```bash
 git clone https://github.com/tu-usuario/ping-panda.git
 cd ping-panda
 ```
 
 2. Instala las dependencias:
+
 ```bash
 pnpm install
 ```
 
 3. Configura las variables de entorno:
+
 ```bash
 cp .env.example .env
 ```
 
 4. Edita el archivo `.env` con tus credenciales:
+
 ```env
 DATABASE_URL="postgresql://user:password@host:port/database"
 CLERK_SECRET_KEY=tu_clerk_secret_key
@@ -74,6 +81,7 @@ UPSTASH_REDIS_TOKEN=tu_redis_token
 ```
 
 5. Ejecuta las migraciones de la base de datos:
+
 ```bash
 pnpm prisma migrate dev
 ```
@@ -140,7 +148,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ## 👥 Autores
 
-- Tu Nombre - [@tu-usuario](https://github.com/tu-usuario)
+- LostoVayne - [@tu-usuario](https://github.com/Lostovayne)
 
 ## 🙏 Agradecimientos
 
@@ -151,4 +159,4 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ---
 
-¿Encontraste un bug? ¿Tienes alguna sugerencia? Por favor, abre un issue [aquí](https://github.com/tu-usuario/ping-panda/issues).
+¿Encontraste un bug? ¿Tienes alguna sugerencia? Por favor, abre un issue [aquí](https://github.com/LostoVAYNE/ping-panda/issues).
