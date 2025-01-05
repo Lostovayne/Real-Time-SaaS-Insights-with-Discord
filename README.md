@@ -1,18 +1,18 @@
-# Ping-Panda 🐼
+# Real-Time SaaS Insights Delivered to Your Discord
 
-Una aplicación web moderna construida con Next.js y un conjunto robusto de tecnologías para ofrecer una experiencia de usuario excepcional.
+A modern web application built with Next.js and a robust set of technologies to provide an exceptional user experience.
 
-## 🚀 Características
+## 🚀 Features
 
-- Autenticación segura con Clerk
-- Base de datos PostgreSQL con Prisma ORM
-- Caché con Redis (Upstash)
-- UI moderna y responsive con Tailwind CSS
-- Tipado seguro con TypeScript
-- API endpoints con Hono
-- Despliegue en Cloudflare Workers
+- Secure authentication with Clerk
+- PostgreSQL database with Prisma ORM
+- Caching with Redis (Upstash)
+- Modern and responsive UI with Tailwind CSS
+- Type-safe with TypeScript
+- API endpoints with Hono
+- Deployment on Cloudflare Workers
 
-## 🛠️ Tecnologías
+## 🛠️ Technologies
 
 - **Frontend:**
 
@@ -21,7 +21,7 @@ Una aplicación web moderna construida con Next.js y un conjunto robusto de tecn
   - Tailwind CSS
   - TypeScript
   - Tanstack React Query
-  - Lucide React (iconos)
+  - Lucide React (icons)
 
 - **Backend:**
 
@@ -31,132 +31,139 @@ Una aplicación web moderna construida con Next.js y un conjunto robusto de tecn
   - Hono (API)
   - Cloudflare Workers
 
-- **Autenticación:**
+- **Authentication:**
 
   - Clerk
 
-- **Herramientas de Desarrollo:**
+- **Development Tools:**
   - ESLint
   - Prettier
   - TypeScript
   - Wrangler (Cloudflare)
 
-## 📋 Prerrequisitos
+## 📋 Prerequisites
 
-- Node.js (versión 18 o superior)
-- pnpm (gestor de paquetes)
-- Una cuenta en Clerk para autenticación
-- Una base de datos PostgreSQL (recomendamos NeonDB)
-- Una instancia de Redis (recomendamos Upstash)
+- Node.js (version 18 or higher)
+- pnpm (package manager)
+- A Clerk account for authentication
+- A PostgreSQL database (we recommend NeonDB)
+- An instance of Redis (we recommend Upstash)
 
-## 🔧 Instalación
+## 🔧 Installation
 
-1. Clona el repositorio:
+1. Clone the repository:
 
-```bash
-git clone https://github.com/tu-usuario/ping-panda.git
-cd ping-panda
-```
+   ```bash
+   git clone https://github.com/your-username/ping-panda.git
+   cd ping-panda
+   ```
 
-2. Instala las dependencias:
+2. Install the dependencies:
 
-```bash
-pnpm install
-```
+   ```bash
+   pnpm install
+   ```
 
-3. Configura las variables de entorno:
+3. Configure the environment variables:
 
-```bash
-cp .env.example .env
-```
+   ```bash
+   cp .env.example .env
+   ```
 
-4. Edita el archivo `.env` con tus credenciales:
+4. Edit the `.env` file with your credentials:
 
-```env
-DATABASE_URL="postgresql://user:password@host:port/database"
-CLERK_SECRET_KEY=tu_clerk_secret_key
-CLERK_PUBLISHABLE_KEY=tu_clerk_publishable_key
-UPSTASH_REDIS_URL=tu_redis_url
-UPSTASH_REDIS_TOKEN=tu_redis_token
-```
+   ````env
+   DATABASE_URL="postgresql://user:password@host:port/database"
+   CLERK_SECRET_KEY=your_clerk_secret_key
+   CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+   UPSTASH_REDIS_URL=your_redis_url
+   UPSTASH_REDIS_TOKEN=your_redis_token
+   ```README.md
 
-5. Ejecuta las migraciones de la base de datos:
+   ````
 
-```bash
-pnpm prisma migrate dev
-```
+5. Run the database migrations:
 
-## 🚀 Uso
+   ```bash
+   pnpm prisma migrate dev
+   ```
 
-### Desarrollo
+## 🚀 Usage
+
+### Development
+
+To start the development server, run:
 
 ```bash
 pnpm dev
 ```
 
-La aplicación estará disponible en `http://localhost:3000`
+### Production
 
-### Producción
+To start the production server, run:
 
 ```bash
-pnpm build
 pnpm start
 ```
 
-### Despliegue
+To build the application for production, run:
 
 ```bash
-pnpm deploy
+pnpm build
 ```
 
-## 📚 Documentación de API
+To deploy the application to Cloudflare, run:
+
+```bash
+pnpm wrangler publish
+```
+
+## 📚 API Documentation
 
 ### Endpoints
 
-- `GET /api/posts` - Obtiene todos los posts
-- `POST /api/posts` - Crea un nuevo post
-- `GET /api/posts/:id` - Obtiene un post específico
-- `PUT /api/posts/:id` - Actualiza un post
-- `DELETE /api/posts/:id` - Elimina un post
+- `GET /api/posts` - Retrieve all posts
+- `POST /api/posts` - Create a new post
+- `GET /api/posts/:id` - Retrieve a specific post
+- `PUT /api/posts/:id` - Update a post
+- `DELETE /api/posts/:id` - Delete a post
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
-```
 ping-panda/
 ├── src/
-│   ├── app/           # Rutas y páginas de Next.js
-│   ├── components/    # Componentes React reutilizables
-│   ├── lib/          # Utilidades y configuraciones
-│   └── styles/       # Estilos globales
+│ ├── app/ # Next.js routes and pages
+│ ├── components/ # Reusable React components
+│ ├── lib/ # Utilities and configurations
+│ └── styles/ # Global styles
 ├── prisma/
-│   └── schema.prisma # Esquema de la base de datos
-├── public/           # Archivos estáticos
+│ └── schema.prisma # Database schema
+├── public/ # Static files
 └── ...
-```
 
-## 🤝 Contribución
+## 🤝 Contributing
 
-1. Fork el proyecto
-2. Crea tu rama de características (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📝 Licencia
+## 📝 License
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👥 Autores
+## 👥 Authors
 
-- LostoVayne - [@tu-usuario](https://github.com/Lostovayne)
+- LostoVayne - [@your-username](https://github.com/Lostovayne)
 
-## 🙏 Agradecimientos
+## 🙏 Acknowledgments
 
 - Next.js Team
 - Vercel
 - Cloudflare
-- Y todos los contribuidores de las dependencias utilizadas
+- All contributors of the dependencies used
 
 ---
 
-¿Encontraste un bug? ¿Tienes alguna sugerencia? Por favor, abre un issue [aquí](https://github.com/LostoVAYNE/ping-panda/issues).
+Did you find a bug? Do you have any suggestions? Please open an issue [here](https://github.com/LostoVAYNE/ping-panda/issues).

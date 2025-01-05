@@ -5,7 +5,7 @@ import { FC, ReactElement, type AnchorHTMLAttributes } from "react"
 
 interface ShinyButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {}
 
-const ShinyButton: FC<ShinyButtonProps> = ({
+export const ShinyButton: FC<ShinyButtonProps> = ({
   className,
   children,
   href,
@@ -28,5 +28,3 @@ const ShinyButton: FC<ShinyButtonProps> = ({
     </Link>
   )
 }
-
-export default ShinyButton
