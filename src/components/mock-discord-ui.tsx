@@ -1,6 +1,15 @@
-import { Inbox, PlusCircle, UserCircle } from "lucide-react"
+import {
+  Cog,
+  Headphones,
+  Inbox,
+  Mic,
+  PlusCircle,
+  PlusIcon,
+  UserCircle,
+} from "lucide-react"
 import { PropsWithChildren } from "react"
 import { Icons } from "./icons"
+import Image from "next/image"
 
 export const MockDiscordUi = ({ children }): PropsWithChildren => {
   return (
@@ -23,7 +32,7 @@ export const MockDiscordUi = ({ children }): PropsWithChildren => {
         ))}
 
         <div className="group mt-auto size-12 bg-discord-background rounded-3xl flex items-center justify-center mb-3 hover:rounded-xl transition-all duration-200 hover:bg-[#3ba55c] cursor-not-allowed">
-          <PlusCircle className="text-[#3ba55c] group-hover:text-white" />
+          <PlusIcon className="text-[#3ba55c] group-hover:text-white" />
         </div>
       </div>
 
@@ -46,6 +55,51 @@ export const MockDiscordUi = ({ children }): PropsWithChildren => {
               <Inbox className="mr-4 size-8 text-[#b9bbbe]" />
               <span className="font-medium text-sm">Nitro</span>
             </div>
+          </div>
+          <div className="px-2 mb-4">
+            <h3 className="text-xs font-semibold text-[#8e9297] px-2 mb-2 uppercase">
+              Direct Meesages
+            </h3>
+            <div className="flex items-center px-2 py-1.5 rounded bg-[#393c43] text-white cursor-pointer">
+              <Image
+                src="/brand-asset-profile-picture.png"
+                alt="PingPanda Avatar"
+                width={32}
+                height={32}
+                className="object-cover rounded-full mr-3"
+              />
+              <span className="font-medium">PingPanda</span>
+            </div>
+
+            <div className="my-1 space-y-px">
+              {[...Array(4)].map((_, i) => (
+                <div
+                  key={i}
+                  className="flex items-center px-2 py-1.5 rounded text-gray-600 cursor-not-allowed"
+                >
+                  <div className="size-8 rounded-full bg-discord-background mr-3" />
+                  <span className="font-medium">User {i + 1}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* <p className="p-2 bg-[#292b2f] flex items-center">sdsd</p> */}
+
+        <div className="p-2 bg-[#292b2f] flex items-center">
+          <div className="size-8 rounded-full bg-brand-700 mr-2" />
+          <div className="flex-1">
+            <p className="text-sm font-medium text-white">You</p>
+            <p className="text-xs text-[#b9bbbe] flex items-center">
+              Status Messa...
+            </p>
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <Mic className="size-5 text-[#b9bbbe] hover:text-white cursor-pointer" />
+            <Headphones className="size-5 text-[#b9bbbe] hover:text-white cursor-pointer" />
+            <Cog className="size-5 hover:rotate-90 transition-transform duration-1000 text-[#b9bbbe] hover:text-white cursor-pointer" />
           </div>
         </div>
       </div>
