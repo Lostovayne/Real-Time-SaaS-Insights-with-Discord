@@ -1,6 +1,6 @@
+import { PlusCircle, UserCircle } from "lucide-react"
 import { PropsWithChildren } from "react"
 import { Icons } from "./icons"
-import { PlusCircle, UserCircle } from "lucide-react"
 
 export const MockDiscordUi = ({ children }): PropsWithChildren => {
   return (
