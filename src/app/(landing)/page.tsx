@@ -1,7 +1,9 @@
+import { DiscordMessage } from "@/components/discord-message"
 import { Heading } from "@/components/heading"
 import { MaxWidthWrapper } from "@/components/max-with-wrapper"
 import { MockDiscordUi } from "@/components/mock-discord-ui"
 import { ShinyButton } from "@/components/shiny-button"
+import { AnimatedList, AnimatedListItem } from "@/components/ui/animated-list"
 import { Check } from "lucide-react"
 
 const Page = () => {
@@ -55,7 +57,13 @@ const Page = () => {
         <div className="relative mx-auto">
           <MaxWidthWrapper className="relative">
             <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-              <MockDiscordUi></MockDiscordUi>
+              <MockDiscordUi>
+                <AnimatedList>
+                  <AnimatedListItem>
+                    <DiscordMessage />
+                  </AnimatedListItem>
+                </AnimatedList>
+              </MockDiscordUi>
             </div>
           </MaxWidthWrapper>
         </div>

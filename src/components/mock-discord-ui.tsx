@@ -1,17 +1,27 @@
 import {
   Cog,
+  GiftIcon,
   Headphones,
+  HelpCircle,
   Inbox,
+  InboxIcon,
+  MenuIcon,
   Mic,
-  PlusCircle,
+  PhoneIcon,
+  PinIcon,
+  PlusCircleIcon,
   PlusIcon,
+  SearchIcon,
+  SmileIcon,
+  StickerIcon,
   UserCircle,
+  VideoIcon,
 } from "lucide-react"
+import Image from "next/image"
 import { PropsWithChildren } from "react"
 import { Icons } from "./icons"
-import Image from "next/image"
 
-export const MockDiscordUi = ({ children }): PropsWithChildren => {
+export const MockDiscordUi = ({ children }: PropsWithChildren) => {
   return (
     <div className="flex min-h-[800px] w-full max-w-[1200px] bg-discord-background text-white rounded-lg overflow-hidden shadow-xl">
       {/* server list */}
@@ -100,6 +110,60 @@ export const MockDiscordUi = ({ children }): PropsWithChildren => {
             <Mic className="size-5 text-[#b9bbbe] hover:text-white cursor-pointer" />
             <Headphones className="size-5 text-[#b9bbbe] hover:text-white cursor-pointer" />
             <Cog className="size-5 hover:rotate-90 transition-transform duration-1000 text-[#b9bbbe] hover:text-white cursor-pointer" />
+          </div>
+        </div>
+      </div>
+
+      {/* main content */}
+      <div className="flex-1 flex flex-col">
+        {/* dm header  */}
+        <div className="h-16 bg-[#36393f] flex items-center px-4 shadow-sm border-b border-[#202225]">
+          <div className="md:hiddem mr-4">
+            <MenuIcon className="text-[#b9bbbe] size-6  hover:text-white cursor-pointer" />
+          </div>
+          <div className="flex items-center">
+            <div className="relative">
+              <Image
+                src="/brand-asset-profile-picture.png"
+                alt="PingPanda Avatar"
+                width={40}
+                height={40}
+                className="object-cover rounded-full mr-3"
+              />
+              <div className="absolute bottom-0 right-3 size-3 bg-green-500 rounded-full border-2 border-[#36393f]" />
+            </div>
+            <p className="font-semibold text-white">PingPanda</p>
+          </div>
+          <div className="ml-auto flex items-center space-x-4 text-[#b9bbbe]">
+            <PhoneIcon className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
+            <VideoIcon className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
+            <PinIcon className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
+            <UserCircle className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
+            <SearchIcon className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
+            <InboxIcon className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
+            <HelpCircle className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
+          </div>
+        </div>
+
+        {/* message history */}
+        <div className="flex-1 overflow-y-auto p-4 bg-discord-background flex flex-col-reverse">
+          {children}
+        </div>
+        {/* message input  */}
+        <div className="p-4">
+          <div className="flex items-center bg-[#40444b] rounded-lg p-1">
+            <PlusCircleIcon className="mx-1 size-7 fill-[#b9bbbe] text-[#40444b] hover:fill-white transition-colors cursor-not-allowed" />
+            <input
+              readOnly
+              type="text"
+              placeholder="Message @PingPanda"
+              className="flex-1 bg-transparent px-1 py-2.5 text-white placeholder-[#72767d] focus:outline-none cursor-not-allowed"
+            />
+            <div className="flex items-center space-x-3 mx-3 text-[#b9bbbe]">
+              <GiftIcon className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
+              <StickerIcon className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
+              <SmileIcon className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
+            </div>
           </div>
         </div>
       </div>
