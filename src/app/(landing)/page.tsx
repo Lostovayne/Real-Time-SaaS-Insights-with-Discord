@@ -60,7 +60,19 @@ const Page = () => {
               <MockDiscordUi>
                 <AnimatedList>
                   <AnimatedListItem>
-                    <DiscordMessage />
+                    <DiscordMessage
+                      avatarSrc={"/brand-asset-profile-picture.png"}
+                      avatarAlt={"PingPanda Avatar"}
+                      username={"PingPanda"}
+                      timestamp={"Today at 12:35PM"}
+                      badgeText="SignUp"
+                      badgeColor="#43b581"
+                      title={"🙍‍♂️ New user signed up"}
+                      content={{
+                        name: "Mateo Ortiz",
+                        email: "mateo@pingpanda.com",
+                      }}
+                    />
                   </AnimatedListItem>
                 </AnimatedList>
               </MockDiscordUi>
