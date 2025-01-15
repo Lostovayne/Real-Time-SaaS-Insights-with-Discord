@@ -1,169 +1,216 @@
-# Real-Time SaaS Insights Delivered to Your Discord
+# PingPanda - SaaS Insights Delivered to Discord
 
-A modern web application built with Next.js and a robust set of technologies to provide an exceptional user experience.
+PingPanda is a real-time SaaS monitoring tool that sends instant notifications directly to your Discord server. Track sales, new users, and other critical events with ease.
 
-## 🚀 Features
+![PingPanda Preview](/public/imag.png)
 
-- Secure authentication with Clerk
-- PostgreSQL database with Prisma ORM
-- Caching with Redis (Upstash)
-- Modern and responsive UI with Tailwind CSS
-- Type-safe with TypeScript
-- API endpoints with Hono
-- Deployment on Cloudflare Workers
+## ✨ Features
 
-## 🛠️ Technologies
+- 🔔 Real-time Discord alerts for critical events
+- 💰 Buy once, use forever pricing model
+- 📊 Track sales, new users, and any custom events
+- 🎨 Beautiful, modern UI with Discord-like interface
+- 🔐 Secure authentication with Clerk
+- ⚡ Built with performance in mind
 
-- **Frontend:**
+## 🛠️ Tech Stack
 
-  - Next.js 14
-  - React 18
-  - Tailwind CSS
-  - TypeScript
-  - Tanstack React Query
-  - Lucide React (icons)
+- **Framework:** Next.js 14
+- **Authentication:** Clerk
+- **Database:** NeonDB (Postgres) with Prisma ORM
+- **Caching:** Upstash Redis
+- **Styling:** Tailwind CSS
+- **UI Components:** Radix UI
+- **Icons:** Lucide React
+- **Deployment:** Cloudflare Workers
+- **API Layer:** Hono
+- **Type Safety:** TypeScript
+- **Data Validation:** Zod
+- **State Management:** TanStack Query
 
-- **Backend:**
+## 🚀 Getting Started
 
-  - Prisma ORM
-  - PostgreSQL (NeonDB)
-  - Redis (Upstash)
-  - Hono (API)
-  - Cloudflare Workers
+### Prerequisites
 
-- **Authentication:**
+- Node.js (Latest LTS version recommended)
+- pnpm/npm/yarn
+- A Discord server where you have admin privileges
 
-  - Clerk
-
-- **Development Tools:**
-  - ESLint
-  - Prettier
-  - TypeScript
-  - Wrangler (Cloudflare)
-
-## 📋 Prerequisites
-
-- Node.js (version 18 or higher)
-- pnpm (package manager)
-- A Clerk account for authentication
-- A PostgreSQL database (we recommend NeonDB)
-- An instance of Redis (we recommend Upstash)
-
-## 🔧 Installation
+### Installation
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/your-username/ping-panda.git
-   cd ping-panda
-   ```
+```bash
+git clone https://github.com/yourusername/ping-panda.git
+cd ping-panda
+```
 
-2. Install the dependencies:
+2. Install dependencies:
 
-   ```bash
-   pnpm install
-   ```
+```bash
+pnpm install
+```
 
-3. Configure the environment variables:
+3. Set up environment variables:
 
-   ```bash
-   cp .env.example .env
-   ```
+```bash
+cp .env.example .env
+```
 
-4. Edit the `.env` file with your credentials:
+4. Generate Prisma client:
 
-   ````env
-   DATABASE_URL="postgresql://user:password@host:port/database"
-   CLERK_SECRET_KEY=your_clerk_secret_key
-   CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-   UPSTASH_REDIS_URL=your_redis_url
-   UPSTASH_REDIS_TOKEN=your_redis_token
-   ```README.md
+```bash
+pnpm postinstall
+```
 
-   ````
-
-5. Run the database migrations:
-
-   ```bash
-   pnpm prisma migrate dev
-   ```
-
-## 🚀 Usage
-
-### Development
-
-To start the development server, run:
+5. Run the development server:
 
 ```bash
 pnpm dev
 ```
 
-### Production
+The application will be available at `http://localhost:3000`
 
-To start the production server, run:
+### Development with Worker
 
-```bash
-pnpm start
-```
-
-To build the application for production, run:
+To develop with Cloudflare Worker:
 
 ```bash
-pnpm build
+pnpm dev:worker
 ```
 
-To deploy the application to Cloudflare, run:
+## 📦 Scripts
 
-```bash
-pnpm wrangler publish
-```
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm lint` - Run ESLint
+- `pnpm deploy` - Deploy to production
+- `pnpm dev:worker` - Start worker development server
+- `pnpm preview:worker` - Preview worker
+- `pnpm deploy:worker` - Deploy worker
 
-## 📚 API Documentation
+## 🎨 UI Components
 
-### Endpoints
+PingPanda features a custom-built Discord-like interface with:
 
-- `GET /api/posts` - Retrieve all posts
-- `POST /api/posts` - Create a new post
-- `GET /api/posts/:id` - Retrieve a specific post
-- `PUT /api/posts/:id` - Update a post
-- `DELETE /api/posts/:id` - Delete a post
+- Real-time message updates
+- Animated notifications
+- Responsive design
+- Dark mode support
+- Custom Discord message components
 
 ## 📁 Project Structure
 
-ping-panda/
-├── src/
-│ ├── app/ # Next.js routes and pages
-│ ├── components/ # Reusable React components
-│ ├── lib/ # Utilities and configurations
-│ └── styles/ # Global styles
-├── prisma/
-│ └── schema.prisma # Database schema
-├── public/ # Static files
-└── ...
+```
+src/
+├── app/                # Next.js app directory
+│   ├── (landing)/     # Landing page routes
+│   └── layout.tsx     # Root layout
+├── components/        # React components
+├── lib/              # Utility libraries
+├── server/           # Server-side code
+└── utils.ts          # Utility functions
+```
 
-## 🤝 Contributing
+## 🔐 Environment Variables
 
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Create a `.env` file in the root directory with the following variables:
 
-## 📝 License
+```bash
+# App
+NEXT_PUBLIC_APP_URL="http://localhost:3000"
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+# Authentication (Clerk)
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
 
-## 👥 Authors
+# Database (NeonDB)
+DATABASE_URL=
 
-- LostoVayne - [@your-username](https://github.com/Lostovayne)
+# Redis (Upstash)
+UPSTASH_REDIS_REST_URL=
+UPSTASH_REDIS_REST_TOKEN=
 
-## 🙏 Acknowledgments
+# Discord
+DISCORD_CLIENT_ID=
+DISCORD_CLIENT_SECRET=
+DISCORD_WEBHOOK_URL=
+```
 
-- Next.js Team
-- Vercel
-- Cloudflare
-- All contributors of the dependencies used
+## 🎨 Tailwind Configuration
 
----
+### Custom Colors
 
-Did you find a bug? Do you have any suggestions? Please open an issue [here](https://github.com/LostoVAYNE/ping-panda/issues).
+```typescript
+colors: {
+  brand: {
+    "25": "#F8F9FD",
+    "50": "#F0F4FA",
+    "100": "#E1E9F6",
+    "200": "#C3D3ED",
+    "300": "#A5BDE4",
+    "400": "#87A7DB",
+    "500": "#6991D2",
+    "600": "#4B76C9",
+    "700": "#3659B1",
+    "800": "#284189",
+    "900": "#1B2A61",
+    "950": "#111A3E",
+  },
+  discord: {
+    background: "#36393f",
+    "brand-color": "#5865f2",
+    "bar-color": "#202225",
+    gray: "#36393f",
+    text: "#dcddde",
+    timestamp: "#72767d",
+  }
+}
+```
+
+### Font Configuration
+
+```typescript
+fontFamily: {
+  heading: ["var(--font-heading)", ...fontFamily.sans],
+  sans: ["var(--font-sans)", ...fontFamily.sans],
+}
+```
+
+## 🔄 API Endpoints
+
+### Authentication
+
+- `POST /api/auth/signin` - Sign in user
+- `POST /api/auth/signup` - Register new user
+- `POST /api/auth/signout` - Sign out user
+
+### Webhooks
+
+- `POST /api/webhook/discord` - Send Discord notification
+- `GET /api/webhook/config` - Get webhook configuration
+
+### User Management
+
+- `GET /api/user/me` - Get current user
+- `PUT /api/user/settings` - Update user settings
+
+### Events
+
+- `POST /api/events` - Create new event
+- `GET /api/events` - List all events
+- `GET /api/events/:id` - Get specific event
+- `DELETE /api/events/:id` - Delete event
+
+## 📄 License
+
+[MIT License](LICENSE)
+
+## 👥 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
