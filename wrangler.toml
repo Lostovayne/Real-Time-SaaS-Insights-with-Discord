@@ -1,5 +1,5 @@
 main = ".worker-next/index.mjs"
-name = "jstack"
+name = "notifydiscord"
 compatibility_date = "2024-12-09"
 compatibility_flags = ["nodejs_compat"]
 assets = { directory = ".worker-next/assets", binding = "ASSETS" }

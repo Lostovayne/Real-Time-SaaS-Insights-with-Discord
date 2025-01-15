@@ -59,28 +59,65 @@ const Page = () => {
             <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
               <MockDiscordUi>
                 <AnimatedList>
-                  <AnimatedListItem>
-                    <DiscordMessage
-                      avatarSrc={"/brand-asset-profile-picture.png"}
-                      avatarAlt={"PingPanda Avatar"}
-                      username={"PingPanda"}
-                      timestamp={"Today at 12:35PM"}
-                      badgeText="SignUp"
-                      badgeColor="#43b581"
-                      title={"🙍‍♂️ New user signed up"}
-                      content={{
-                        name: "Mateo Ortiz",
-                        email: "mateo@pingpanda.com",
-                      }}
-                    />
-                  </AnimatedListItem>
+                  <DiscordMessage
+                    avatarSrc={"/brand-asset-profile-picture.png"}
+                    avatarAlt={"PingPanda Avatar"}
+                    username={"PingPanda"}
+                    timestamp={"Today at 12:35PM"}
+                    badgeText="SignUp"
+                    badgeColor="#43b581"
+                    title={"🙍‍♂️ New user signed up"}
+                    content={{
+                      name: "Mateo Ortiz",
+                      email: "mateo@pingpanda.com",
+                    }}
+                  />
+
+                  <DiscordMessage
+                    avatarSrc={"/brand-asset-profile-picture.png"}
+                    avatarAlt={"PingPanda Avatar"}
+                    username={"PingPanda"}
+                    timestamp={"Today at 10:31PM"}
+                    badgeText="Revenue"
+                    badgeColor="#faa61a"
+                    title={"🤑 Payment received"}
+                    content={{
+                      amount: "$58.00",
+                      email: "franklin@codigo369.com",
+                      plan: "PRO",
+                    }}
+                  />
+
+                  <DiscordMessage
+                    avatarSrc={"/brand-asset-profile-picture.png"}
+                    avatarAlt={"PingPanda Avatar"}
+                    username={"PingPanda"}
+                    timestamp={"Today at 05:11AM"}
+                    badgeText="Milestone"
+                    badgeColor="#5865f2"
+                    title={"🚀 Revenue Milestone Achieved"}
+                    content={{
+                      recurringRevenue: "$5.000 USD",
+                      growth: "+10.7%",
+                    }}
+                  />
                 </AnimatedList>
               </MockDiscordUi>
             </div>
           </MaxWidthWrapper>
         </div>
       </section>
-      <section></section>
+      <section className="relative py-24 sm:py-32 bg-brand-25">
+        <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-20">
+          <div className="text-center">
+            <h2 className="text-center text-base/7 font-semibold text-brand-600">
+              Intuitive Monitoring
+            </h2>
+            <Heading>Stay ahead with real-time insights</Heading>
+          </div>
+          <div></div>
+        </MaxWidthWrapper>
+      </section>
       <section></section>
     </>
   )

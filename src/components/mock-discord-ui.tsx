@@ -33,7 +33,7 @@ export const MockDiscordUi = ({ children }: PropsWithChildren) => {
         {[...Array(5)].map((_, i) => (
           <div
             key={i}
-            className="size-12 bg-discord-background rounded-3xl flex items-center justify-center mb-3 hover:rounded-xl transition-all duration-200 hover:bg-discord-brand-color cursor-not-allowed"
+            className="size-12 bg-discord-background rounded-3xl flex items-center justify-center mb-3 hover:rounded-xl transition-all cursor-default duration-200 hover:bg-discord-brand-color"
           >
             <span className="text-lg font-semibold text-gray-400">
               {String.fromCharCode(65 + i)}
