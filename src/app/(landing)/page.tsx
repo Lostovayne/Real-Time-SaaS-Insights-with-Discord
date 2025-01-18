@@ -3,7 +3,7 @@ import { Heading } from "@/components/heading"
 import { MaxWidthWrapper } from "@/components/max-with-wrapper"
 import { MockDiscordUi } from "@/components/mock-discord-ui"
 import { ShinyButton } from "@/components/shiny-button"
-import { AnimatedList, AnimatedListItem } from "@/components/ui/animated-list"
+import { AnimatedList } from "@/components/ui/animated-list"
 import { Check } from "lucide-react"
 
 const Page = () => {
@@ -115,7 +115,19 @@ const Page = () => {
             </h2>
             <Heading>Stay ahead with real-time insights</Heading>
           </div>
-          <div></div>
+          <div className="grid gap-4 lg:grid-cols-3 lg:grid-rows-2">
+            {/* first bento grid element */}
+            <div className="relative lg:row-span-2">
+              <div className="absolute inset-0 bg-white ld:rounded-l-[2rem]" />
+              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+                <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+                  <p className="mt-2 text-lg/7 font-medium tracking-tight text-brand-950 max-lg:text-center">
+                    Real-time noptifications
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </MaxWidthWrapper>
       </section>
       <section></section>
