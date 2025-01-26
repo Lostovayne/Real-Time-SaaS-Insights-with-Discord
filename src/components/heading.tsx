@@ -14,7 +14,7 @@ export const Heading: FC<HeadingProps> = ({
   return (
     <h1
       className={cn(
-        "text-5xl sm:text-6xl text-pretty font-heading font-semibold tracking-tight text-zinc-800",
+        "text-5xl sm:text-6xl text-pretty font-heading font-semibold tracking-tight text-zinc-800 antialiased",
         className
       )}
       {...props}

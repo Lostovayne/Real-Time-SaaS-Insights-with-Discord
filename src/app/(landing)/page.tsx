@@ -122,8 +122,15 @@ const Page = () => {
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
                 <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                   <p className="mt-2 text-lg/7 font-medium tracking-tight text-brand-950 max-lg:text-center">
-                    Real-time noptifications
+                    Real-time notifications
                   </p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                    Get notified about critical events the moment they happen,
+                    no matter if you are at home or no the go
+                  </p>
+                </div>
+                <div className="relative min-h-[30vh] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
+                  <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl"></div>
                 </div>
               </div>
             </div>
