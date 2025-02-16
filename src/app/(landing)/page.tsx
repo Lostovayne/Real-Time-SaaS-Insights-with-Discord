@@ -5,6 +5,7 @@ import { MockDiscordUi } from "@/components/mock-discord-ui"
 import { ShinyButton } from "@/components/shiny-button"
 import { AnimatedList } from "@/components/ui/animated-list"
 import { Check } from "lucide-react"
+import Image from "next/image"
 
 const Page = () => {
   return (
@@ -126,11 +127,36 @@ const Page = () => {
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                     Get notified about critical events the moment they happen,
-                    no matter if you are at home or no the go
+                    no matter if you are at home or no the go.
                   </p>
                 </div>
                 <div className="relative min-h-[30vh] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
-                  <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl"></div>
+                  <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                    <Image
+                      fill
+                      src={"/phone-screen.png"}
+                      alt={"phone screen"}
+                      className="size-full object-cover object-top"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[1rem]" />
+            </div>
+            {/* second bento grid element */}
+            <div className="relative max-lg:row-start-1">
+              <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]">
+                <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+                  <div className="px-8  pt-8 sm:px-10 sm:pt-10">
+                    <p className="mt-2 text-lg/7 font-medium tracking-tight text-brand-950 max-lg:text-center">
+                      Track Any Event
+                    </p>
+                    <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                      From new user signups to successful payments, PingPanda
+                      notifies you for all critical events in your SaaS.
+                    </p>
+                  </div>
+                  <div className=""></div>
                 </div>
               </div>
             </div>
