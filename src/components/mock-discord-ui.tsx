@@ -49,7 +49,7 @@ export const MockDiscordUi = ({ children }: PropsWithChildren) => {
       {/* dm list */}
 
       <div className="hidden md:flex w-60 bg-[#2f3136] flex-col">
-        <div className="px-4 h-16 border-b border-[#202225] flex items-center shadow-sm">
+        <div className="px-4 h-16 border-b border-[#202225] flex items-center shadow-xs">
           <div className="w-full bg-[#202225] text-sm rounded px-2 h-8 flex items-center justify-center text-gray-500 cursor-not-allowed">
             Find or start a conversation
           </div>
@@ -117,7 +117,7 @@ export const MockDiscordUi = ({ children }: PropsWithChildren) => {
       {/* main content */}
       <div className="flex-1 flex flex-col">
         {/* dm header  */}
-        <div className="h-16 bg-[#36393f] flex items-center px-4 shadow-sm border-b border-[#202225]">
+        <div className="h-16 bg-[#36393f] flex items-center px-4 shadow-xs border-b border-[#202225]">
           <div className="md:hiddem mr-4">
             <MenuIcon className="text-[#b9bbbe] size-6  hover:text-white cursor-pointer" />
           </div>
@@ -157,7 +157,7 @@ export const MockDiscordUi = ({ children }: PropsWithChildren) => {
               readOnly
               type="text"
               placeholder="Message @PingPanda"
-              className="flex-1 bg-transparent px-1 py-2.5 text-white placeholder-[#72767d] focus:outline-none cursor-not-allowed"
+              className="flex-1 bg-transparent px-1 py-2.5 text-white placeholder-[#72767d] focus:outline-hidden cursor-not-allowed"
             />
             <div className="flex items-center space-x-3 mx-3 text-[#b9bbbe]">
               <GiftIcon className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />

@@ -17,7 +17,7 @@ const Page = () => {
               <Heading>
                 <span>Real-Time SaaS Insights,</span>
                 <br />
-                <span className="relative bg-gradient-to-r from-brand-700 to-brand-800 text-transparent bg-clip-text">
+                <span className="relative bg-linear-to-r from-brand-700 to-brand-800 text-transparent bg-clip-text">
                   Delivered to Your Discord
                 </span>
               </Heading>
@@ -120,7 +120,7 @@ const Page = () => {
             {/* first bento grid element */}
             <div className="relative lg:row-span-2">
               <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]" />
-              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
                 <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                   <p className="mt-2 text-lg/7 font-medium tracking-tight text-brand-950 max-lg:text-center">
                     Real-time notifications
@@ -143,13 +143,13 @@ const Page = () => {
                 </div>
               </div>
 
-              <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]" />
+              <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 lg:rounded-l-[2rem]" />
             </div>
 
             {/* second bento grid element */}
             <div className="relative max-lg:row-start-1">
               <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]" />
-              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
                 <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                   <p className="mt-2 text-lg/7 font-medium tracking-tight text-brand-950 max-lg:text-center">
                     Track Any Event
@@ -170,13 +170,13 @@ const Page = () => {
                 </div>
               </div>
 
-              <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]" />
+              <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 max-lg:rounded-t-[2rem]" />
             </div>
 
             {/* third bento grid element */}
             <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
               <div className="absolute inset-px rounded-lg bg-white" />
-              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
+              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
                 <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                   <p className="mt-2 text-lg/7 font-medium tracking-tight text-brand-950 max-lg:text-center">
                     Track Any Properties
@@ -198,13 +198,13 @@ const Page = () => {
                 </div>
               </div>
 
-              <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5" />
+              <div className="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5" />
             </div>
 
             {/* Fourth bento grid element */}
             <div className="relative lg:row-span-2">
               <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]" />
-              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
+              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
                 <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                   <p className="mt-2 text-lg/7 font-medium tracking-tight text-brand-950 max-lg:text-center">
                     Easy Integration
