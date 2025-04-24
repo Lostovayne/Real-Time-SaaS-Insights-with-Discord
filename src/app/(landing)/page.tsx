@@ -8,8 +8,26 @@ import { Check } from "lucide-react"
 import Image from "next/image"
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"
 
 const Page = () => {
+  const codeSnippet = `await fetch("https://localhost:3000/api/v1/events", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: "Bearer <YOUR_API_KEY>",
+  },
+  body: JSON.stringify({
+    category: "sales",
+    fields: {
+      plan: "PRO",
+      email: "zoe.EMAIL@gmail.com",
+      amount: 58,
+    },
+  }),
+})
+`
+
   return (
     <>
       <section className="relative py-24 sm:py-32 bg-brand-25">
@@ -227,16 +245,49 @@ const Page = () => {
                     </div>
                     {/* owo */}
                     <div className="overflow-hidden">
-                      <div className="max-h-[30rem]">code</div>
+                      <div className="max-h-[30rem]">
+                        <SyntaxHighlighter
+                          language="typescript"
+                          style={{
+                            ...oneDark,
+                            'pre[class*="language-"]': {
+                              ...oneDark['pre[class*="language-"]'],
+                              background: "transparent",
+                              overflow: "hidden",
+                            },
+                            'code[class*="language-"]': {
+                              ...oneDark['code[class*="language-"]'],
+                              background: "transparent",
+                            },
+                          }}
+                        >
+                          {codeSnippet}
+                        </SyntaxHighlighter>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]" />
             </div>
           </div>
         </MaxWidthWrapper>
       </section>
-      <section></section>
+      {/* Clients Reviews */}
+      <section className="relative py-24 sm:py-32 bg-white">
+        <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-20">
+          <div>
+            <h2 className="text-center text-base/7 font-semibold text-brand-600">
+              Real-World Experiences
+            </h2>
+            <Heading className="text-center">What our customers say</Heading>
+          </div>
+                          {/* First Customer Review */}
+          <div className="mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
+            <div className="flex flex-auto flex-col gap-4 bg-brand-25 p-6 sm:p-8 lg:p-16 rounded-t-[2rem] lg:rounded-tr-none lg:rounded-l-[2rem]"></div>
+          </div>
+        </MaxWidthWrapper>
+      </section>
     </>
   )
 }
